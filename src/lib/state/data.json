@@ -1,0 +1,59 @@
+[
+	{
+		"id": 1,
+		"title": "Plastic",
+		"author": "Scott Guild",
+		"date": "February 2024",
+		"price": 420,
+		"tags": [
+			"Climate change",
+			"Sci-Fi"
+		]
+	},
+	{
+		"id": 2,
+		"title": "Space Oddities",
+		"author": "Harry Cliff",
+		"date": "March 2024",
+		"price": 542,
+		"tags": [
+			"Climate change",
+			"History",
+			"Health"
+		]
+	},
+	{
+		"id": 3,
+		"title": "H is for hope",
+		"author": "Elizabeth Kolbert",
+		"illustrator": "Wesley Allsbrook",
+		"date": "March 2024",
+		"price": 674,
+		"tags": [
+			"Climate change",
+			"Technology"
+		]
+	},
+	{
+		"id": 4,
+		"title": "The Exquisite Machine",
+		"author": "Sian E. Harding",
+		"date": "February 2024",
+		"price": 981,
+		"tags": [
+			"Health",
+			"Biochemistry"
+		]
+	},
+	{
+		"id": 5,
+		"title": "The ocean",
+		"author": "Oleg",
+		"price": 504,
+		"tags": [
+			"Biochemistry",
+			"Sci-Fi"
+		]
+	}
+]
+

@@ -1,6 +1,6 @@
 import { SortConfigType, SortCriteria } from "@/@types";
 import { setSortConfig } from "@/lib/state/booksReducer";
-import { useAppDispatch, useAppSelector } from "@/lib/state/store";
+import { useAppDispatch } from "@/lib/state/store";
 import { useCallback } from "react";
 
 export const useSortHandlers = (sortConfig:SortConfigType) => {

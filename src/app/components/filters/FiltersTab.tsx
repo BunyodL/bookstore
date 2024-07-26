@@ -22,7 +22,7 @@ export type Props = {
 const FiltersTab = ({ tags, handleSort, sortConfig, filterTags }: Props) => {
 	const dispatch = useAppDispatch();
 	const sortCriteria: SortCriteria[] = ["price", "author", "date"];
-	const selectedTag = (tag) => filterTags.includes(tag);
+	const selectedTag = (tag: string) => filterTags.includes(tag);
 	const [filterTagsDropDown, setFilterTagsDropDown] = useState<"open" | "closed">("closed");
 
 	return (

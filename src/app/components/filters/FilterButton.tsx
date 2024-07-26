@@ -2,12 +2,10 @@ import { mergeClassNames } from "@/app/components/utils/mergeClassNames";
 import React, { ButtonHTMLAttributes, SVGProps } from "react";
 
 type FilterButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-	title: string
 	className?: string
-	svgElement?: SVGProps<SVGSVGElement>
 }
 
-const FilterButton = ({ children, className, svgElement, title, ...props }: FilterButtonProps) => {
+const FilterButton = ({ children, className, ...props }: FilterButtonProps) => {
 	return (
 		<button {...props} className={
 			mergeClassNames(

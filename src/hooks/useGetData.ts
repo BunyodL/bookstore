@@ -1,6 +1,6 @@
-import { BooksType, SessionStorage, SortConfigType } from "@/@types";
+import { BooksType, SessionStorage } from "@/@types";
 import { getData } from "@/lib/api/getData";
-import { setBooks, setFilterTags, setFilterTagsFromSS, setSortConfig } from "@/lib/state/booksReducer";
+import { setBooks, setFilterTagsFromSS } from "@/lib/state/booksReducer";
 import { useAppDispatch, useAppSelector } from "@/lib/state/store";
 import { useEffect } from "react";
 

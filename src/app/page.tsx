@@ -10,7 +10,6 @@ import { useTags } from '@/hooks/useTags';
 
 export default function Home() {
   const { books, filterTags, sortConfig } = useGetData();
-  console.log(books, filterTags, sortConfig);
 
   const allTags = useTags(books);
 

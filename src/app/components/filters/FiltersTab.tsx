@@ -10,6 +10,7 @@ import { resetRules, setFilterTags } from '@/lib/state/booksReducer';
 import { useAppDispatch } from '@/lib/state/store';
 import Image from 'next/image';
 import React, { useState } from 'react';
+import ClickAwayListener from 'react-click-away-listener';
 
 export type Props = {
   books: BooksType;
@@ -26,6 +27,10 @@ const FiltersTab = ({ tags, handleSort, sortConfig, filterTags }: Props) => {
   const [filterTagsDropDown, setFilterTagsDropDown] = useState<
     'open' | 'closed'
   >('closed');
+
+  const handleClickAway = () => {
+    setFilterTagsDropDown('closed');
+  };
 
   return (
     <Container className={'rounded-[32px] flex justify-between'}>
@@ -70,25 +75,27 @@ const FiltersTab = ({ tags, handleSort, sortConfig, filterTags }: Props) => {
           </FilterButton>
         </div>
 
-        <div
-          className={`grid grid-cols-2 max-sm:grid-cols-1 bg-secondary p-2 max-sm:p-0.5 rounded-2xl gap-1 absolute min-w-52 max-sm:min-w-6 top-6 left-[-50px] max-sm:left-[-5px] ${
-            filterTagsDropDown === 'closed' && 'hidden'
-          }`}
-        >
-          {tags.map((t) => (
-            <Button
-              key={t}
-              className={`btn-sm bg-accent max-sm:btn-xs max-sm:py-1 text-[12px] text-black h-fit ${
-                selectedTag(t) && 'bg-yellow-500'
-              }`}
-              onClick={() => {
-                dispatch(setFilterTags(t));
-              }}
-            >
-              {t}
-            </Button>
-          ))}
-        </div>
+        <ClickAwayListener onClickAway={handleClickAway}>
+          <div
+            className={`grid grid-cols-2 max-sm:grid-cols-1 bg-secondary p-2 max-sm:p-0.5 rounded-2xl gap-1 absolute min-w-52 max-sm:min-w-6 top-6 left-[-50px] max-sm:left-[-5px] ${
+              filterTagsDropDown === 'closed' && 'hidden'
+            }`}
+          >
+            {tags.map((t) => (
+              <Button
+                key={t}
+                className={`btn-sm bg-accent max-sm:btn-xs max-sm:py-1 text-[12px] text-black h-fit ${
+                  selectedTag(t) && 'bg-yellow-500'
+                }`}
+                onClick={() => {
+                  dispatch(setFilterTags(t));
+                }}
+              >
+                {t}
+              </Button>
+            ))}
+          </div>
+        </ClickAwayListener>
       </div>
     </Container>
   );

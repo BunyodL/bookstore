@@ -27,8 +27,8 @@ export const sortBooks = (books: BooksType, sortConfig: SortConfigType, filterTa
 					return a.author.localeCompare(b.author);
 				}
 				return sortConfig.order === 'asc'
-					? +new Date(a.date) - +new Date(b.date)
-					: +new Date(b.date) - +new Date(a.date);
+					? +new Date(a.date!) - +new Date(b.date!)
+					: +new Date(b.date!) - +new Date(a.date!);
 			}
 			default:
 				return 0

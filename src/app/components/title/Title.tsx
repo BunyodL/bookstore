@@ -11,7 +11,7 @@ const Title = ({ children, className, ...props }: TitleProps) => {
 		<Container className={"rounded-[32px]"}>
 			<div {...props} className={
 				mergeClassNames(
-					"flex justify-center items-center text-[56px] ",
+					"flex justify-center items-center text-[56px] max-sm:text-4xl",
 					className,
 				)}>
 				{children}

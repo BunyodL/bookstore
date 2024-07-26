@@ -7,7 +7,7 @@ export type Props = React.HTMLAttributes<HTMLDivElement> & {
 
 const Container = ({ children, className, ...props }: Props) => {
 	return (
-		<div {...props} className={mergeClassNames( className,"bg-primary w-full  p-8")}>
+		<div {...props} className={mergeClassNames( className,"bg-primary w-full p-8 max-sm:p-4")}>
 			{children}
 		</div>
 	);

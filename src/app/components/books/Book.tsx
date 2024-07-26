@@ -12,7 +12,7 @@ const Book = ({ book }: Props) => {
 	return (
 		<Container
 			className={"bg-secondary px-3 py-4 rounded-[20px] bg-opacity-50 hover:bg-opacity-100 flex flex-col gap-4"}>
-			<div className={"p-[10px]"}>
+			<div className={"p-[10px] max-sm:p-1"}>
 				<div className={"capitalize text-[16px] font-black"}>{book.title}</div>
 				<div className={"text-[12px]"}>
 					<div>by {book.author}
@@ -25,10 +25,10 @@ const Book = ({ book }: Props) => {
 
 			<HorizontalLine />
 
-			<div className={" flex gap-6"}>
+			<div className={"flex gap-6 max-sm:gap-3"}>
 				{
 					book.tags.map(t => (
-						<Button className={"btn-accent"} key={t}>
+						<Button className={"btn-accent max-sm:btn-xs max-sm:py-1"} key={t}>
 							{t}
 						</Button>
 					))

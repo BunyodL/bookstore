@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="bg-background w-screen h-screen flex justify-center ">
-      <div className="w-[500px] text-accent flex flex-col gap-5 py-10 absolute">
+      <div className="md:w-[500px] min-w-80 text-accent flex flex-col gap-5 max-sm:gap-2 py-10 absolute max-sm:px-3">
         <Title>Book Store</Title>
 
         <FiltersTab

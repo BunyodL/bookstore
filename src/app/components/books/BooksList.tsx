@@ -12,7 +12,7 @@ type Props = {
 const BooksList = ({ books }: Props) => {
 	return (
 		<Container className={"rounded-[32px]"}>
-			<div className={"flex flex-col gap-5"}>
+			<div className={"flex flex-col gap-5 max-sm:gap-3"}>
 				{
 					!books.length
 						? <span>There is nothing here</span>
